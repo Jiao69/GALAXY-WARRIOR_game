@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy Warrior</title>
+    <link rel="icon" href="resources/images/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="menu" id="menu" width="800" height="600">
+        <h1>Galaxy Warrior</h1>
+        <button id="startButton">Start Game</button>
+        <button id="continueButton" style="display: none;">Continue</button>
+        <button id="restartButton" style="display: none;">Restart</button>
+        <button id="mainMenuButton" style="display: none;">Main Menu</button>
+        <button id="nastrButton">Settings</button>
+        <div id="settingsMenu" style="display: none;">
+            <div class="volume-container">
+                <div class="volume-label">Volume</div>
+                <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.35">
+            </div>
+        </div>
+    </div>
+    <div id="difficultyPopup" style="display: none;" class="popup">
+        <h2>Choose skin</h2>
+        <div class="skin-options">
+            <div class="skin-option" data-skin="1">
+                <img src="resources/images/ship.png" class="skin-preview" alt="Скин 1">
+            </div>
+            <div class="skin-option" data-skin="2">
+                <img src="resources/images/ship2.png" class="skin-preview" alt="Скин 2">
+            </div>
+            <div class="skin-option" data-skin="3">
+                <img src="resources/images/ship3.png" class="skin-preview" alt="Скин 3">
+            </div>
+        </div>
+        <h2>Choose Difficulty</h2>
+        <button class="difficultyOption" data-diff="easy">Easy</button>
+        <button class="difficultyOption" data-diff="normal">Normal</button>
+        <button class="difficultyOption" data-diff="hard">Hard</button>
+    </div>
+
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <script src="script.js"></script>
+</body>
+
+
+</html>
